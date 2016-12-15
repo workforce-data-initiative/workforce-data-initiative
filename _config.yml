@@ -1,0 +1,101 @@
+# Site settings
+title: Data at Work
+short_title: Data at Work
+description: |
+  Data, tools, and lightweight standards to make a more open and interoperable 21st centruy workforce data ecosystem.
+baseurl: ""
+url: "http://dataatwork.org" # the base hostname & protocol for your site
+github_username:  workforce-data-initiative
+github_repo:  dataatwork.org
+paypal: admin@dataatwork.org
+contact: http://discuss.dataatwork.org/c/dataatwork
+editsitehowto: /about/edit-site/
+gems:
+  - jekyll-redirect-from
+
+supporters:
+  -
+    name: Sloan Foundation
+    logo: sloan.png
+    footer_logo: sloan-footer.png
+    url: http://www.sloan.org/
+  -
+    name: J.P. Morgan Chase Foundation
+    logo: JPMorgan_Chase_Foundation.jpg
+    footer_logo: JPMorgan_Chase_Foundation.jpg
+    url: https://www.jpmorganchase.com/
+  -  
+
+googleanalytics: UA-33874954-38
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  parse_block_html: true
+
+
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: page
+      edit: true
+  -
+    scope:
+      path: "data"
+    values:
+      section: data      
+  -
+    scope:
+      path: "standards"
+    values:
+      section: standards
+  -
+    scope:
+      path: "tools"
+    values:
+      section: tools
+  -
+    scope:
+      path: "guides"
+    values:
+      section: guides
+  -
+    scope:
+      path: ""
+      type: "case_studies"
+    values:
+      section: case-studies
+      layout: case_study
+      lead: true
+
+related_projects:
+  -
+      name: OpenGovernmentData.org
+      link: http://opengovernmentdata.org/
+  -
+      name: The DataHub
+      link: http://datahub.io/
+  -
+      name: DataCatalogs.org
+      link: http://datacatalogs.org/
+  -
+      name: OpenSpending.org
+      link: http://openspending.org/
+  -
+      name: SchoolOfData.org
+      link: http://schoolofdata.org/
+  -
+      name: OpenDefinition.org
+      link: http://opendefinition.org/
+  -
+      name: Introducing Open Data
+      link: http://okfn.org/opendata/
+
+collections:
+  case_studies:
+    output: true
+    permalink: /case-studies/:path/
